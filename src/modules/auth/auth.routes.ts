@@ -2,7 +2,7 @@
 
 import { Router } from "express";
 
-import * as adminController from "./admin.controller";
+import * as adminController from "./auth.controller";
 
 const router = Router();
 

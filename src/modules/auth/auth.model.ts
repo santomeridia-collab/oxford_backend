@@ -5,7 +5,7 @@ import mongoose, {
   Document,
 } from "mongoose";
 
-import { IAdmin } from "./admin.types";
+import { IAdmin } from "./auth.types";
 
 export interface AdminDocument
   extends IAdmin,

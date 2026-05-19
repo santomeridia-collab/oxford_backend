@@ -3,7 +3,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-import { AdminModel } from "./admin.model";
+import { AdminModel } from "./auth.model";
 
 export const registerAdmin =
   async (

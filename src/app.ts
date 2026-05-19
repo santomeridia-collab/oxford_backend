@@ -6,8 +6,8 @@ import courseRoutes from "./modules/courses/course.routes";
 import galleryRoutes from "./modules/gallery/gallery.routes";
 import eventRoutes from "./modules/event/event.routes";
 import contactRoutes from "./modules/contact/contact.routes";
-import adminRoutes from "./modules/admin/admin.routes";
-
+import adminRoutes from "./modules/auth/auth.routes";
+import newsRoutes from "./modules/news/news.routes"
 
 const app = express();
 
@@ -27,5 +27,6 @@ app.use(
   "/api/contact-management",
   contactRoutes
 );
+app.use("/api/news", newsRoutes)
 
 export default app;

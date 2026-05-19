@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 
 import asyncHandler from "../../utils/asyncHandler";
 
-import * as adminService from "./admin.service";
+import * as adminService from "./auth.service";
 
 export const registerAdmin =
   asyncHandler(
