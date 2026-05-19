@@ -6,7 +6,7 @@ export const createHero = async (data: IHero) => {
 };
 
 export const getHero = async () => {
-  return await HeroModel.findOne().sort({ createdAt: -1 });
+  return await HeroModel.find().sort({ createdAt: -1 });
 };
 
 export const updateHero = async (id: string, data: Partial<IHero>) => {
