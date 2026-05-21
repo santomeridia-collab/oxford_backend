@@ -9,6 +9,7 @@ import contactRoutes from "./modules/contact/contact.routes";
 import adminRoutes from "./modules/auth/auth.routes";
 import newsRoutes from "./modules/news/news.routes";
 import demoRoutes from "./modules/demo/demo.routes";
+import instructorRoutes from "./modules/instructor/instructor.routes";
 
 const app = express();
 
@@ -24,5 +25,5 @@ app.use("/api/events", eventRoutes);
 app.use("/api/contact-management", contactRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/demo", demoRoutes);
-
+app.use("/api/instructors", instructorRoutes);
 export default app;
