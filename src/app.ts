@@ -10,6 +10,7 @@ import adminRoutes from "./modules/auth/auth.routes";
 import newsRoutes from "./modules/news/news.routes";
 import demoRoutes from "./modules/demo/demo.routes";
 import instructorRoutes from "./modules/instructor/instructor.routes";
+import enrollRoutes from "./modules/enroll/enroll.routes";
 
 const app = express();
 
@@ -26,4 +27,5 @@ app.use("/api/contact-management", contactRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/demo", demoRoutes);
 app.use("/api/instructors", instructorRoutes);
+app.use("/api/enroll", enrollRoutes);
 export default app;
