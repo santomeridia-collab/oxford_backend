@@ -32,7 +32,7 @@ const courseSchema = new Schema<CourseDocument>(
 
     mode: {
       type: String,
-      enum: ["online", "offline"],
+      enum: ["online", "offline", "online and offline"],
       required: true,
     },
 
