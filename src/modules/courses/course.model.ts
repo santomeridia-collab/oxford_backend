@@ -30,12 +30,12 @@ const courseSchema = new Schema<CourseDocument>(
       required: true,
     },
 
-    mode: {
-      type: String,
-      enum: ["online", "offline", "online and offline"],
-      required: true,
-    },
-
+    mode: [
+      {
+        type: String,
+        enum: ["online", "offline"],
+      },
+    ],
     amount: {
       type: Number,
       required: true,
@@ -48,10 +48,10 @@ const courseSchema = new Schema<CourseDocument>(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 export const CourseModel = mongoose.model<CourseDocument>(
   "Course",
-  courseSchema
+  courseSchema,
 );
