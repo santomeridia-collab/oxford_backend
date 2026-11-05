@@ -87,3 +87,14 @@ export const getReviewSummary =
       rating_5,
     };
   };
+
+
+  export const deleteContact = async (id: string) => {
+  const contact = await ContactModel.findByIdAndDelete(id);
+
+  if (!contact) {
+    throw new Error("Contact not found");
+  }
+
+  return contact;
+};

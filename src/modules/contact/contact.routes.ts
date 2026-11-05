@@ -21,4 +21,9 @@ router.get(
   contactController.getReviewSummary
 );
 
+router.delete(
+  "/:id",
+  contactController.deleteContact
+);
+
 export default router;

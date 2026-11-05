@@ -18,3 +18,14 @@ export const getEnrolls =
         createdAt: -1,
       });
   };
+
+
+  export const deleteEnroll = async (id: string) => {
+  const enroll = await EnrollModel.findByIdAndDelete(id);
+
+  if (!enroll) {
+    throw new Error("Enrollment not found");
+  }
+
+  return enroll;
+};

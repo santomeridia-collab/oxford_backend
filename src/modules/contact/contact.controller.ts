@@ -65,3 +65,23 @@ export const getReviewSummary =
       res.status(200).json(summary);
     }
   );
+
+
+  export const deleteContact =
+  asyncHandler(
+    async (
+      req: Request,
+      res: Response
+    ) => {
+
+      const id = String(req.params.id);
+
+      await contactService.deleteContact(id);
+
+
+      res.status(200).json({
+        success: true,
+        message: "Contact deleted successfully",
+      });
+    }
+  );

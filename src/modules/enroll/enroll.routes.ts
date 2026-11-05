@@ -15,5 +15,8 @@ router.get(
   "/",
   enrollController.getEnrolls
 );
-
+router.delete(
+  "/:id",
+  enrollController.deleteEnroll
+);
 export default router;
